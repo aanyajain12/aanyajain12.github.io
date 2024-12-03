@@ -1,0 +1,11 @@
+@font-face{
+	font-family: 'Nuances';
+	src: url('Nuances Typeface.otf') format(opentype);
+	font-weight; 150;
+}
+body{
+	/* this is the outermost element on your page*/
+	background: yellow;
+	font-family: 'Nuances';
+	font-size: 150px;
+}
