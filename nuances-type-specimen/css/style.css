@@ -1,11 +1,43 @@
-@font-face{
-	font-family: 'Nuances';
-	src: url('Nuances Typeface.otf') format(opentype);
-	font-weight; 150;
+@font-face {
+    font-family: 'Nuances';
+    src: url('Nuances Typeface.otf') format(opentype);
+    font-weight: 150;
 }
-body{
-	/* this is the outermost element on your page*/
-	background: yellow;
-	font-family: 'Nuances';
-	font-size: 150px;
+
+body {
+    background: white;
+    font-family: 'Nuances';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.centered-text {
+    text-align: center;
+    font-size: 200px;
+    transition: font-size 0.3s ease; /* Smooth size transition */
+}
+
+.image-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 10px; /* Space between the images */
+    width: 100%; /* Ensure full width of the container */
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-row img {
+    width: 60%; /* Make the images smaller */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Add pointer cursor for hover effect */
+}
+
+.column:hover img {
+    transform: scale(1.1); /* Optional: Zoom effect on hover */
+    transition: transform 0.3s ease;
 }
