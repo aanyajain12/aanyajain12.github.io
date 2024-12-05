@@ -62,11 +62,19 @@ body {
     display: inline-block; /* Keep the container only as large as the image */
     margin-top: 200px; /* Add space above if needed */
 }
-
+.overlay-text {
+    position: absolute;
+    top: -30px; /* Center text vertically */
+    left: 250px; /* Center text horizontally */
+    transform: translate(-50%, -50%); /* Fine-tune centering */
+    color: white; /* White text */
+    font-size: 150px; /* Adjust font size */
+}
 .image-container img {
     display: block; /* Prevent extra space below the image */
     width: 100%; /* Ensure the image scales properly */
     height: 600px; /* Maintain aspect ratio */
 }
+
 
 
