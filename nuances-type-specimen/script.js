@@ -19,5 +19,3 @@ columns.forEach((column) => {
         dynamicText.style.fontSize = '200px'; // Original size
     });
 });
-console.log("Script is running!");
- 

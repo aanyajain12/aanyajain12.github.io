@@ -11,17 +11,33 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+.with-line {
+    text-align: center;        /* Center the heading */
+    font-size: 40px;           /* Heading font size */
+}
+
+.with-line::after {
+    content: "";               /* Empty content to display a line */
+    display: block;            /* Make it behave like a block element */
+    height: 2px;               /* Thickness of the line */
+    background-color: black;   /* Black color */
+    width: 100%;               /* Full width */
+    margin: -130px auto -27px;      /* Shift the line up */
+    position: -20px;        /* Use relative positioning */
+    top: -10px;                /* Move the line upwards */
+}
+
 
 .centered-text {
     text-align: center;
-    font-size: 200px;
+    font-size: 150px;
     transition: font-size 0.3s ease; /* Smooth size transition */
 }
 
 .image-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-    gap: 10px; /* Space between the images */
+    gap: 175px; /* Space between the images */
     width: 100%; /* Ensure full width of the container */
 }
 
@@ -32,12 +48,25 @@ body {
 }
 
 .image-row img {
-    width: 60%; /* Make the images smaller */
+    width: 100%; /* Make the images smaller */
     height: auto; /* Maintain aspect ratio */
     cursor: pointer; /* Add pointer cursor for hover effect */
 }
 
 .column:hover img {
-    transform: scale(1.1); /* Optional: Zoom effect on hover */
     transition: transform 0.3s ease;
 }
+
+.image-container {
+    position: relative; /* Establish a positioning context for the text */
+    display: inline-block; /* Keep the container only as large as the image */
+    margin-top: 200px; /* Add space above if needed */
+}
+
+.image-container img {
+    display: block; /* Prevent extra space below the image */
+    width: 100%; /* Ensure the image scales properly */
+    height: 600px; /* Maintain aspect ratio */
+}
+
+
