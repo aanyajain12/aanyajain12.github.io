@@ -68,7 +68,6 @@ body {
     margin-top: 200px; /* Add space above if needed */
 }
 .image-container:hover img {
-    transform: scale(1.05);
 }
 .overlay-text {
     position: absolute;
@@ -78,7 +77,7 @@ body {
     color: white; /* White text */
     font-size: 150px; /* Adjust font size */
      opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.7s ease;
     pointer-events: none;
 }
 .image-container img {
@@ -92,7 +91,7 @@ body {
     font-size: 18px;
     font-weight: regular;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.7s ease;
 }
 
 .image-container:hover .overlay-text,
