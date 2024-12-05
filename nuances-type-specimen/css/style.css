@@ -4,6 +4,11 @@
     font-weight: 150;
 }
 
+@font-face {
+    font-family: 'Futura';
+    src: url('futura.ttc') format('truetype');
+}
+
 body {
     background: white;
     font-family: 'Nuances';
@@ -62,6 +67,9 @@ body {
     display: inline-block; /* Keep the container only as large as the image */
     margin-top: 200px; /* Add space above if needed */
 }
+.image-container:hover img {
+    transform: scale(1.05);
+}
 .overlay-text {
     position: absolute;
     top: -30px; /* Center text vertically */
@@ -69,12 +77,29 @@ body {
     transform: translate(-50%, -50%); /* Fine-tune centering */
     color: white; /* White text */
     font-size: 150px; /* Adjust font size */
+     opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
 }
 .image-container img {
     display: block; /* Prevent extra space below the image */
-    width: 100%; /* Ensure the image scales properly */
-    height: 600px; /* Maintain aspect ratio */
+    width: 60%; /* Ensure the image scales properly */
+    height: auto; /* Maintain aspect ratio */
 }
 
+.right-text {
+    color: black;
+    font-size: 18px;
+    font-weight: regular;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
 
+.image-container:hover .overlay-text,
+.image-container:hover .right-text {
+    opacity: 1;
+}
+.right-text {
+    font-family: 'Futura', sans-serif; /* Use the custom typeface */
+}
 
