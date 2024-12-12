@@ -65,13 +65,13 @@ body {
 .image-container {
     display: flex; /* Arrange the image and text side by side */
     align-items: center; /* Align image and text vertically */
-    margin-top: 15vh; /* Add space above if needed */
+    margin: -2vh; /* Add space above if needed */
     padding: 0px; /* Add padding around the container */
 }
 
 .image-container img {
     display: block; /* Ensure the image doesn't add extra space below */
-    width: 62.5%; /* Adjust the image width as needed */
+    width: 64.5%; /* Adjust the image width as needed */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensure the image looks good if resized */
 }
@@ -94,11 +94,42 @@ body {
     font-family: 'Nuances', serif; /* Optional: consistent font choice */
 }
 
+.line-2 {
+    text-align: center;        /* Center the heading */
+    font-size: 40px;           /* Heading font size */
+}
+
+.line-2:after {
+    content: "";               /* Empty content to display a line */
+    display: block;            /* Make it behave like a block element */
+    height: 2px;               /* Thickness of the line */
+    background-color: black;   /* Black color */
+    width: 100%;               /* Full width */
+    margin: -115px auto -27px;      /* Shift the line up */
+    position: -10px;        /* Use relative positioning */
+    top: -10px;                /* Move the line upwards */
+}
+
+.line-3 {
+    text-align: center;        /* Center the heading */
+    font-size: 40px;           /* Heading font size */
+}
+.line-3:after {
+    content: "";               /* Empty content to display a line */
+    display: block;            /* Make it behave like a block element */
+    height: 2px;               /* Thickness of the line */
+    background-color: black;   /* Black color */
+    width: 100%;               /* Full width */
+    margin: 100px auto -27px;      /* Shift the line up */
+    position: -10px;        /* Use relative positioning */
+    top: -10px;                /* Move the line upwards */
+}
+
 .image-container-reverse {
     display: flex; /* Arrange the image and text side by side */
     align-items: center; /* Align image and text vertically */
     flex-direction: reverse; /* Reverse the order: image on the right, text on the left */
-    margin-top: 15vh; /* Add space above if needed */
+    margin-top: 0vh; /* Add space above if needed */
     padding: 0px; /* Add padding around the container */
 }
 
@@ -114,5 +145,5 @@ body {
     font-size: 8.9vh; /* Adjust text size for readability */
     line-height: 1.05; /* Add line height for better readability */
     flex: 1; /* Allow the text to take up remaining space */
-    padding: 15px; /* Add padding around the container */
+    padding-left: 15px; /* Add padding around the container */
 }
