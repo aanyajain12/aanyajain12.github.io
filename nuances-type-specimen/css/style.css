@@ -34,7 +34,7 @@ body {
 .centered-text {
     text-align: center;
     font-size: 200px;
-    transition: font-size 0.5s ease; /* Smooth size transition */
+    transition: text-change 0.5s ease; /* Smooth size transition */
     top: -20px;
       margin: 150px    /* Shift the line up */
 }

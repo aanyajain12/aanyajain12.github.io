@@ -1,3 +1,4 @@
+console.log('Hi');
 // Get the text element and all columns
 const dynamicText = document.getElementById('dynamic-text');
 const columns = document.querySelectorAll('.column');
