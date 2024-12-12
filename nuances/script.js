@@ -10,7 +10,7 @@ columns.forEach((column) => {
     // On mouse enter: change text and reduce size
     column.addEventListener('mouseenter', () => {
         dynamicText.textContent = hoverText;
-        dynamicText.style.fontSize = '200px'; // Reduced size
+        dynamicText.style.fontSize = '150px'; // Reduced size
     });
 
     // On mouse leave: reset text and size

@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'Nuances';
+    src: url('Nuances Typeface.otf') format(opentype);
+    font-weight: 150;
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url('futura.ttc') format('truetype');
+}
+
+body {
+    margin: 0;
+}
+
+main{
+    display: grid;
+height:200vh;
+grid-template-columns: repeat(6, 1fr);
+grid-template-rows: repeat(10, 1fr);
+gap:50vh;
+}
+
+.heading-text {
+    text-align: center;        /* Center the heading */
+    font-size: 190px;           /* Heading font size */
+     font-family: 'Nuances';
+     position: -50px;
+}
+
+.with-line {
+   display: block;            /* Make it behave like a block element */
+    height: 2px;               /* Thickness of the line */
+    background-color: black;   /* Black color */
+    width: 100%;               /* Full width */
+      grid-column: 1/3;
+        grid-row: 2/4;
+}
+
+.with-line:after {
+    content: "";               /* Empty content to display a line */
+    display: block;            /* Make it behave like a block element */
+    height: 2px;               /* Thickness of the line */
+    background-color: black;   /* Black color */
+    width: 100%;               /* Full width */
+    margin: 0vh;      /* Shift the line up */
+    position: -10vh;        /* Use relative positioning */
+    top: 10vh;                /* Move the line upwards */
+}
+
+.editorial {
+    grid-column: 1/3;
+        grid-row: 2/2;
+         width: 10%;
+}
+
+.elegant {
+     grid-column: 2/3;
+        grid-row: 2/2;
+         width: 10%;
+}
+
+.detailed {
+     grid-column: 3/4;
+        grid-row: 2/2;
+         width: 10%;
+}
+
+.centered-text {
+    text-align: center;
+    font-size: 170px;
+    transition: font-size 0.3s ease; /* Smooth size transition */
+}
+
+.image-about {
+    grid-column: 1/2;
+        grid-row: 3/3;
+}
+
+.image-container {
+    position: relative; /* Establish a positioning context for the text */
+    display: inline-block; /* Keep the container only as large as the image */
+    margin-top: 20vh; /* Add space above if needed */
+}
+.image-container img {
+    display: block; /* Prevent extra space below the image */
+    width: 60%; /* Ensure the image scales properly */
+    height: auto; /* Maintain aspect ratio */
+}
+.right-text {
+     text-align: left;
+    font-size: 72px;
+}
+
