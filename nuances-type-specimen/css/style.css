@@ -50,6 +50,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 100px;
 }
 
 .image-row img {
@@ -66,7 +67,7 @@ body {
     display: flex; /* Arrange the image and text side by side */
     align-items: center; /* Align image and text vertically */
     margin: -2vh; /* Add space above if needed */
-    padding: 0px; /* Add padding around the container */
+    padding-bottom: 0px; /* Add padding around the container */
 }
 
 .image-container img {
@@ -138,6 +139,7 @@ body {
     width: 62%; /* Adjust the image width as needed */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensure the image looks good if resized */
+    padding-left: 10px;
 }
 
 .image-container-reverse .left-text {
