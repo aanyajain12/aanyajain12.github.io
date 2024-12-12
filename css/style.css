@@ -5,7 +5,8 @@
 }
 body{
 	/* this is the outermost element on your page*/
+		text-align: center;
 	background: white;
-	font-family: 'Nuances';
-	font-size: 150px;
+	font-family: serif;
+	font-size: 70px;
 }
