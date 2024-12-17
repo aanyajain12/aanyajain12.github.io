@@ -15,7 +15,6 @@
 
 body {
     background: white;
-    font-family: 'Nuances';
     margin: 0;
     padding: 0;
 }
@@ -38,6 +37,7 @@ body {
 
 .centered-text {
     text-align: center;
+    font-family: 'Nuances';
     font-size: 200px;
     transition: text-change 0.5s ease; /* Smooth size transition */
     top: -20px;
@@ -111,6 +111,7 @@ body {
     opacity: 0; /* Initially hide the text */
     transition: opacity 0.3s ease; /* Smooth fade-in effect */
     font-size: 70.9px;
+    font-family: 'Nuances';
     line-height: 1.05;
     text-align: left;
     flex: 1;
@@ -125,6 +126,7 @@ body {
     width: 100%; /* Adjust the width as needed */
     margin: 10px auto; /* Center the block horizontally and add space around */
     font-size: 19vh; /* Adjust text size */
+        font-family: 'Nuances';
     line-height: 1.05; /* Improve readability with line height */
     text-align: center; /* Align text for a clean, professional look */
     font-family: 'Nuances', serif; /* Optional: consistent font choice */
@@ -200,6 +202,7 @@ body {
 .image-container-reverse .left-text {
     text-align: left; /* Align the text to the right */
     font-size: 8.9vh; /* Adjust text size for readability */
+        font-family: 'Nuances';
     line-height: 1.05; /* Add line height for better readability */
     flex: 1; /* Allow the text to take up remaining space */
     padding-left: 15px; /* Add padding around the container */
@@ -209,13 +212,25 @@ body {
     width: 98%; /* Adjust the width as needed */
     margin: 10px auto; /* Center the block horizontally and add space around */
     font-size: 19vh; /* Adjust text size */
+        font-family: 'Nuances';
     line-height: 1.05; /* Improve readability with line height */
     text-align: center; /* Align text for a clean, professional look */
+}
 
 .last-text {
-        width: 98%; /* Adjust the width as needed */
-    font-size: 70vh; /* Adjust text size */
-  line-height: 1.05;  
+    width: 98%; /* Adjust the width as needed */
+    font-size: 18px; /* Adjust text size */
+    line-height: 1.05;  
     text-align: center; /* Align text for a clean, professional look */
-    font-family: futura;
+    font-family: serif;
     }
+
+    .last-text a {
+    color: inherit; /* Use the same color as the surrounding text */
+    text-decoration: underline; /* Remove underline */
+}
+
+.last-text a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
