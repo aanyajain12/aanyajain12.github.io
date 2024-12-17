@@ -8,6 +8,11 @@
     src: url('futura.ttc') format('truetype');
 }
 
+@font-face {
+    font-family: 'Baskerville';
+    src: url('baskerville.ttc') format('truetype');
+}
+
 body {
     background: white;
     font-family: 'Nuances';
@@ -58,6 +63,17 @@ body {
     cursor: pointer; /* Add pointer cursor for hover effect */
 }
 
+/* Apply grayscale and transition to all images in image-row */
+.image-row img {
+    filter: grayscale(100%); /* Make images black and white */
+    transition: filter 0.5s ease; /* Smooth transition effect */
+}
+
+/* Remove grayscale on hover */
+.image-row img:hover {
+    filter: grayscale(0%); /* Restore color on hover */
+}
+
 .column:hover img {
     transition: transform 0.3s ease;
 }
@@ -65,6 +81,7 @@ body {
 .image-container {
     display: flex; /* Arrange the image and text side by side */
     align-items: center; /* Align image and text vertically */
+    position: relative;
     margin: -2vh; /* Add space above if needed */
     padding: 0px; /* Add padding around the container */
 }
@@ -74,15 +91,34 @@ body {
     width: 64.5%; /* Adjust the image width as needed */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensure the image looks good if resized */
+
+ /* Black and white filter with prefixes */
+    -webkit-filter: grayscale(100%); /* For older Webkit browsers */
+    filter: grayscale(100%);
+
+    /* Smooth transition with prefixes */
+    -webkit-transition: -webkit-filter 0.5s ease; /* Webkit transition */
+    transition: filter 0.3s ease;
+}
+
+.image-container:hover img {
+    -webkit-filter: grayscale(0%); /* For older Webkit browsers */
+    filter: grayscale(0%);
 }
 
 
 .right-text {
-    text-align: left; /* Align the text to the left */
-    font-size: 70.9px; /* Adjust text size for readability */
-    line-height: 1.05; /* Add line height for better readability */
-    flex: 1; /* Allow the text to take up remaining space */
-     padding: 15px; /* Add padding around the container */
+    opacity: 0; /* Initially hide the text */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+    font-size: 70.9px;
+    line-height: 1.05;
+    text-align: left;
+    flex: 1;
+    padding: 15px;
+}
+
+.image-container:hover .right-text {
+    opacity: 1; /* Show the text on hover */
 }
 
 .text-block {
@@ -99,22 +135,20 @@ body {
     font-size: 40px;           /* Heading font size */
 }
 
-.line-2:after {
+.line-2::after {
     content: "";               /* Empty content to display a line */
     display: block;            /* Make it behave like a block element */
     height: 2px;               /* Thickness of the line */
     background-color: black;   /* Black color */
     width: 100%;               /* Full width */
-    margin: -115px auto -27px;      /* Shift the line up */
-    position: -10px;        /* Use relative positioning */
-    top: -10px;                /* Move the line upwards */
+    margin: -100px auto -27px;      /* Shift the line up */
 }
 
 .line-3 {
     text-align: center;        /* Center the heading */
     font-size: 40px;           /* Heading font size */
 }
-.line-3:after {
+.line-3::after {
     content: "";               /* Empty content to display a line */
     display: block;            /* Make it behave like a block element */
     height: 2px;               /* Thickness of the line */
@@ -129,7 +163,7 @@ body {
     display: flex; /* Arrange the image and text side by side */
     align-items: center; /* Align image and text vertically */
     flex-direction: reverse; /* Reverse the order: image on the right, text on the left */
-    margin-top: 0vh; /* Add space above if needed */
+    margin-top: -11vh; /* Add space above if needed */
     padding: 0px; /* Add padding around the container */
 }
 
@@ -141,6 +175,28 @@ body {
     padding-left: 10px;
 }
 
+/* Apply grayscale and transition to image-container-reverse */
+.image-container-reverse img {
+    filter: grayscale(100%); /* Make image black and white */
+    transition: filter 0.3s ease; /* Smooth transition */
+}
+
+/* Remove grayscale and show text on hover */
+.image-container-reverse:hover img {
+    filter: grayscale(0%); /* Restore color on hover */
+}
+
+.image-container-reverse .left-text {
+    opacity: 0; /* Hide text initially */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Show the left text when hovering over the container */
+.image-container-reverse:hover .left-text {
+    opacity: 1; /* Show text on hover */
+}
+
+
 .image-container-reverse .left-text {
     text-align: left; /* Align the text to the right */
     font-size: 8.9vh; /* Adjust text size for readability */
@@ -148,3 +204,18 @@ body {
     flex: 1; /* Allow the text to take up remaining space */
     padding-left: 15px; /* Add padding around the container */
 }
+
+.text-container {
+    width: 98%; /* Adjust the width as needed */
+    margin: 10px auto; /* Center the block horizontally and add space around */
+    font-size: 19vh; /* Adjust text size */
+    line-height: 1.05; /* Improve readability with line height */
+    text-align: center; /* Align text for a clean, professional look */
+
+.last-text {
+        width: 98%; /* Adjust the width as needed */
+    font-size: 70vh; /* Adjust text size */
+  line-height: 1.05;  
+    text-align: center; /* Align text for a clean, professional look */
+    font-family: futura;
+    }

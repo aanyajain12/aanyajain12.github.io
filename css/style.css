@@ -3,10 +3,43 @@
 	src: url('Nuances Typeface.otf') format(opentype);
 	font-weight; 150;
 }
+
+/**{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+    font-variation-settings: 'wght' var(--wght), 'GRAD' var(--grad);
+}*/
+.darkmode{
+    background: black;
+    color: white;
+}
+
 body{
+
+	#button{
+		font-family: sans-serif;
+		font-size: 15px;
+    margin-top: -0.4em;
+    margin-bottom: 2em;
+    border: 1px solid;
+    padding: 10px;
+    display: inline-block;
+/*    text-transform: uppercase;*/
+/*    letter-spacing: 0.1em;*/
+}
+
+#button:hover{
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
 	/* this is the outermost element on your page*/
-		text-align: center;
+	margin-top: 0.4em;
 	background: white;
-	font-family: serif;
-	font-size: 70px;
+	color: black; 
+	font-size: 50px;
+
 }
