@@ -230,7 +230,3 @@ body {
     text-decoration: underline; /* Remove underline */
 }
 
-.last-text a:hover {
-    text-decoration: underline; /* Add underline on hover */
-}
-
